@@ -18,7 +18,7 @@ Where name = 'Nevermind'
 
 SELECT name
 FROM albums
-Where release_date = BETWEEN 1989 AND 2000
+Where release_date BETWEEN 1989 AND 2000
 
 
 SELECT name
