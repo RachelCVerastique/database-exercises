@@ -4,6 +4,13 @@ USE rachel;
 SELECT DISTINCT title
 FROM titles;
 
+# SELECT title, COUNT(title)
+# FROM titles
+# GROUP BY title
+# ORDER BY COUNT(*) DESC ;
+
+
+
 
 SELECT last_name
 FROM employees
