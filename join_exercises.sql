@@ -56,7 +56,11 @@ ORDER BY dept_name;
 
 
 
-SELECT CONCAT( first_name,' ', last_name) AS Employee
-FROM employees
-WHERE
+SELECT CONCAT( e.first_name,' ', e.last_name) AS Employee, d.dept_name, CONCAT(e2.first_name, ' ', e2.last_name) AS Department_Manager
+FROM employees AS e
+JOIN dept_emp de on e.emp_no = de.emp_no
+JOIN departments d on d.dept_no = d.dept_no
+JOIN dept_manager dm on de.emp_no = dm.emp_no
+JOIN employees e2 on e2.emp_no = dm.emp_no
+WHERE de.to_date >
 
